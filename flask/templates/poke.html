@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Pokemon Selector</h1>
+<form action='/' , method='GET'>
+    <input type='submit' , value='Clear'>
+</form>
+<br>
+<form action='/' , method='POST'>
+    <label><input type='checkbox' name='type' value='type'>タイプ不一致</label>
+    <label><input type='checkbox' name='version1' value='sword'>剣</label>
+    <label><input type='checkbox' name='version2' value='shield'>盾</label>
+    <label><input type='checkbox' name='first' value='first'>御三家なし</label>
+    <label><input type='checkbox' name='legend' value='legend'>伝説なし</label>
+    <label><input type='checkbox' name='gallant' value='gallant'>ガラル地方のみ</label>
+    <br>
+    <label>数: <input type='text' name='number'></label>
+    <br>
+    <input type='submit' , value='Random Select'>
+</form>
+<br>
+<table>
+    <tbody>
+        {% for p in pokemons %}
+        <tr>
+            <td>{{p.idx}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.type1}}</td>
+            <td>{{p.type2}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

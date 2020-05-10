@@ -1,5 +1,6 @@
 # ポケモンランダムセレクター
 
-ランダムにポケモンを6体選ぶ．
+ランダムにポケモンを選ぶ．
 
-* `python main.py`
+* `cd flask`, `python pokemon.py`
+* access to http://localhost:8888
